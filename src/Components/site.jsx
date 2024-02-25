@@ -8,21 +8,17 @@ import HorizontalTextAnimation from "./HorizontalTextAnimation";
 export default function Site() {
   return (
     <div className="site_site">
-      <header className="">
-        <div className="">
-          <div className="">
-            <span className="">
-              Elizabeth
-              <br />
-              Soares
-            </span>
-            <div className="Frame427319684">
-              <span className="Home">Home</span>
-              <span className="About">About</span>
-              <span className="Work">Work</span>
-              <span className="Contact">Contact</span>
-            </div>
-          </div>
+      <header className="header">
+        <span className="">
+          Elizabeth
+          <br />
+          Soares
+        </span>
+        <div className="headerOptions">
+          <span className="headerText">Home</span>
+          <span className="headerText">About</span>
+          <span className="headerText">Work</span>
+          <span className="headerText">Contact</span>
         </div>
       </header>
 

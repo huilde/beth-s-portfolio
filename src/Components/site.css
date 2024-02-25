@@ -1,7 +1,8 @@
 .site_site {
   margin: auto;
-  width: 100%;
-  overflow: auto;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -17,7 +18,28 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  padding: 0 5vw;
+  padding: 0 2vw;
+}
+
+.headerText {
+  color: #000;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5rem;
+}
+
+.headerOptions {
+  display: flex;
+  gap: 10%;
 }
 .site_site .NavbarLogoLeft .NavbarContainer {
   height: 32.98px;
@@ -399,27 +421,38 @@
   background: rgba(17, 123, 116, 1);
 }
 .animationContainer {
-  padding: 4rem 1.5rem;
   flex-direction: column;
   background: red;
   display: block;
   height: 1588px;
-  margin: 4rem 0rem;
+  overflow: hidden;
+  position: relative; /* Importante para restringir o filho */
+  /* max-width: 80vw; */
+  overflow: hidden;
 }
 
-.animationChild,
-.animationChild2 {
-  display: block;
+.animationChild {
+  display: inline;
   align-items: center;
-
   color: #000;
   font-family: Inter;
   font-size: 5.75rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 140.523%;
+
+  /* line-height: 140.523%; */
   overflow-x: hidden;
   overflow-y: hidden;
+  * {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  span {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  /* max-width: 100vw; */
 }
 
 .site_site .HeroNoImage_2 .Frame427319685_1 {

@@ -6,7 +6,7 @@ const HorizontalTextAnimation = (props) => {
   const textRef2 = useRef(null);
   const { text } = props;
 
-  const duration = 20;
+  const duration = 45;
   const top = 1450;
   // Hook to get viewport scroll position
   const { scrollX } = useViewportScroll();
@@ -45,7 +45,7 @@ const HorizontalTextAnimation = (props) => {
   }, []);
 
   return (
-    <>
+    <div className="teste">
       <motion.div
         ref={textRef1}
         className="animationChild"
@@ -66,7 +66,7 @@ const HorizontalTextAnimation = (props) => {
           repeat: Infinity, // Repeat infinitely
         }}
       >
-        <h1>{text}</h1>
+        {text}
       </motion.div>
 
       <motion.div
@@ -89,9 +89,9 @@ const HorizontalTextAnimation = (props) => {
           repeat: Infinity, // Repeat infinitely
         }}
       >
-        <h1>{text}</h1>
+        {text}
       </motion.div>
-    </>
+    </div>
   );
 };
 
