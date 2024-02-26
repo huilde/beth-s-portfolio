@@ -45,13 +45,18 @@ export default function App() {
         slidesPerView={1}
         spaceBetween={0}
         onScrollbarDragEnd={(e) => console.log(e)}
-        mousewheel={true}
+        // mousewheel={true}
         pagination={{
           clickable: true,
         }}
-        speed={800} // Adjust the speed to make the transition slower (in milliseconds)
         effect={"fade"} // Change the transition effect to fade
         easing={"ease-in-out"} //
+        speed={1200}
+        mousewheel={{ releaseOnEdges: false }}
+        followFinger={false}
+        touchReleaseOnEdges={true}
+        longSwipes={false}
+        parallax={true}
         modules={[Mousewheel, Pagination]}
         className="mySwiper"
       >

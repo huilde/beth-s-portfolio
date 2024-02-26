@@ -7,7 +7,7 @@ const HorizontalTextAnimation = (props) => {
   const { text } = props;
 
   const duration = 45;
-  const top = 1450;
+  const top = 100;
   // Hook to get viewport scroll position
   const { scrollX } = useViewportScroll();
 

@@ -20,6 +20,9 @@
 
 .mySwiper {
   height: 100vh;
+  * {
+    text-decoration-line: underline;
+  }
 }
 
 .swiper {
@@ -49,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 5rem;
+  margin: 0 6.25vw;
 }
 
 .headerOptions {
@@ -78,7 +81,7 @@
 }
 
 .example-container div {
-  background: red;
+  background: grey;
   border-radius: 30px;
   width: 150px;
   height: 150px;
@@ -116,7 +119,7 @@
 .Container {
   display: flex;
   width: 100vw;
-  padding: 5rem 0rem;
+  padding: 5rem 6.25vw;
   align-items: center;
   gap: 1.5rem;
   box-sizing: border-box;
@@ -150,41 +153,24 @@
   font-weight: 700;
   line-height: normal;
 }
-.site_site .HeroHeadingRight {
-  position: relative;
-  flex: none;
-  margin-bottom: NaNpx;
-  width: 1443.36px;
-  height: 704.22px;
+.mainFlex {
   display: flex;
-  padding-top: 62.08px;
-  padding-right: 23.28px;
-  padding-bottom: 62.08px;
-  padding-left: 23.28px;
-  box-sizing: border-box;
-  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 5rem;
+  padding: 0 6.25vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.site_site .HeroHeadingRight .Container_1 {
-  position: relative;
-  flex: none;
-  margin-right: 77.6px;
-  width: 1164px;
-  height: 580.06px;
-  display: flex;
-  box-sizing: border-box;
-}
-.site_site .HeroHeadingRight .Container_1 .Column_1 {
-  position: relative;
-  flex: none;
-  margin-right: 77.6px;
-  width: 543.1999999999999px;
+
+.site_site .Column_1 {
+  max-width: 543.1999999999999px;
   height: 381.1134381103515px;
   display: flex;
   box-sizing: border-box;
 }
-.site_site .HeroHeadingRight .Container_1 .Column_1 .ImageWrapper {
-  position: relative;
-  flex: none;
+.site_site .Column_1 .ImageWrapper {
   margin-right: 9.7px;
   width: 543.1999999999999px;
   height: 381.1134381103515px;
@@ -194,7 +180,7 @@
   justify-content: center;
   align-items: center;
 }
-.site_site .HeroHeadingRight .Container_1 .Column_1 .ImageWrapper .Image {
+.site_site .Column_1 .ImageWrapper .Image {
   position: relative;
   flex: none;
   margin-bottom: NaNpx;
@@ -207,26 +193,22 @@
   justify-content: center;
   align-items: center;
 }
-.site_site .HeroHeadingRight .Container_1 .Column_2 {
-  position: relative;
-  flex: none;
-  margin-right: 77.6px;
-  width: 543.1999999999999px;
-  height: 580.06px;
+.Column_2 {
+  display: flex;
+  padding-top: 12.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex: 1 0 0;
   display: flex;
   flex-direction: column;
-  padding-top: 194px;
+  /* padding-top: 194px; */
   box-sizing: border-box;
 }
 .site_site
-  .HeroHeadingRight
-  .Container_1
   .Column_2
   .Atuocomodesignerh8anoscomosltimos5anosdedicadosaodesigndeprodutosdigitaisMeupropsitopromoverimpactopositivonavidadaspessoaspormeiodeprodutoseficientesinclusivosesignificativos {
-  position: relative;
-  flex: none;
   margin-bottom: 23.28px;
-  width: 467.53999999999996px;
   height: 197.88px;
   color: rgba(0, 0, 0, 1);
   font-family: Inter;
@@ -234,15 +216,20 @@
   font-weight: 700;
   line-height: 32.71369255065918px;
 }
+
+.strong {
+  color: #000;
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140.523%;
+  text-decoration-line: underline;
+}
 .site_site
-  .HeroHeadingRight
-  .Container_1
   .Column_2
   .PortrsdadesignercombachareladoeespecializaoemprodutosdigitaishumameninaquedesdeapocadoOrkutjseaventuravacomHTMLePhotoscapesemsaberqueissomudariaoseurumoprofissionalDuranteoensinomdioaocursartcnicoemmultimdiameapaixoneipelodesignetudoqueeleenglobaescolhiseguirestacarreiraemeaprimoreinareadigitaletecnolgicaTenhoumolharminuciosoparaasinterfacescomcuidadoeprecisoparaencantarecriarvalordeformasignificativaconcretizandoideiaseprojetandoexperinciasVercurrculo {
-  position: relative;
-  flex: none;
   margin-bottom: 23.28px;
-  width: 467.53999999999996px;
   height: 164.9px;
   color: rgba(0, 0, 0, 1);
   font-family: Inter;
@@ -410,9 +397,8 @@
 }
 .animationContainer {
   flex-direction: column;
-  background: red;
   display: block;
-  height: 1588px;
+  height: 19rem;
   overflow: hidden;
   position: relative; /* Importante para restringir o filho */
   overflow: hidden;
@@ -558,14 +544,12 @@
   height: 776px;
   display: flex;
   flex-direction: column;
-  padding-top: 62.08px;
-  padding-right: 139.68px;
-  padding-bottom: 62.08px;
-  padding-left: 139.68px;
+
   box-sizing: border-box;
   align-items: center;
 }
 .sobre {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -573,9 +557,14 @@
   gap: 1.5rem;
   flex: 1 0 0;
   align-self: stretch;
+  border-bottom: #e8e7ea 0.0625rem solid;
+  padding-bottom: 5rem;
 }
-.Chegouataqui {
+.site_site .HeroNoImage_4 .Chegouataqui {
+  position: relative;
   flex: none;
+  margin-bottom: 23.28px;
+  width: 161.01999999999998px;
   height: 23.28px;
   display: flex;
   justify-content: center;
@@ -596,7 +585,7 @@
   font-weight: 600;
   line-height: 103.30499999999999px;
 }
-.site_site .HeroNoImage_4 {
+.site_site .HeroNoImage_4 .Frame427319686 {
   position: relative;
   flex: none;
   margin-bottom: 23.28px;
@@ -605,35 +594,41 @@
   display: flex;
   box-sizing: border-box;
 }
-.site_site .HeroNoImage_4 .Group10 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group10 {
   position: relative;
   flex: none;
   margin-right: 9.7px;
   width: 48.5px;
   height: 48.5px;
 }
-.site_site .HeroNoImage_4 .Group10 .Group4 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group10 .Group4 {
   position: absolute;
   left: 12.61px;
   top: 12.61px;
   width: 23.28px;
   height: 23.28px;
 }
-.site_site .HeroNoImage_4 .Group10 .Group4 .rilinkedinfill {
+.site_site .HeroNoImage_4 .Frame427319686 .Group10 .Group4 .rilinkedinfill {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 23.28px;
   height: 23.28px;
 }
-.site_site .HeroNoImage_4 .Group10 .Group4 .rilinkedinfill .Vector {
+.site_site
+  .HeroNoImage_4
+  .Frame427319686
+  .Group10
+  .Group4
+  .rilinkedinfill
+  .Vector {
   position: absolute;
   left: 2.8518023681640625px;
   top: 2.909052734375px;
   width: 79.4166644414266%;
   height: 75.0041643778483%;
 }
-.site_site .HeroNoImage_4 .Group10 .Ellipse4 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group10 .Ellipse4 {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -644,35 +639,41 @@
     rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
   box-sizing: border-box;
 }
-.site_site .HeroNoImage_4 .Group11 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group11 {
   position: relative;
   flex: none;
   margin-right: 9.7px;
   width: 48.5px;
   height: 48.5px;
 }
-.site_site .HeroNoImage_4 .Group11 .Group5 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group11 .Group5 {
   position: absolute;
   left: 12.61px;
   top: 12.61px;
   width: 23.28px;
   height: 23.28px;
 }
-.site_site .HeroNoImage_4 .Group11 .Group5 .ridribbbleline {
+.site_site .HeroNoImage_4 .Frame427319686 .Group11 .Group5 .ridribbbleline {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 23.28px;
   height: 23.28px;
 }
-.site_site .HeroNoImage_4 .Group11 .Group5 .ridribbbleline .Vector_1 {
+.site_site
+  .HeroNoImage_4
+  .Frame427319686
+  .Group11
+  .Group5
+  .ridribbbleline
+  .Vector_1 {
   position: absolute;
   left: 1.94px;
   top: 1.94px;
   width: 83.33333333333334%;
   height: 83.33333333333334%;
 }
-.site_site .HeroNoImage_4 .Group11 .Ellipse5 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group11 .Ellipse5 {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -683,35 +684,41 @@
     rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
   box-sizing: border-box;
 }
-.site_site .HeroNoImage_4 .Group12 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group12 {
   position: relative;
   flex: none;
   margin-right: 9.7px;
   width: 48.5px;
   height: 48.5px;
 }
-.site_site .HeroNoImage_4 .Group12 .Group6 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group12 .Group6 {
   position: absolute;
   left: 12.61px;
   top: 12.61px;
   width: 23.28px;
   height: 23.28px;
 }
-.site_site .HeroNoImage_4 .Group12 .Group6 .ribehancefill {
+.site_site .HeroNoImage_4 .Frame427319686 .Group12 .Group6 .ribehancefill {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 23.28px;
   height: 23.28px;
 }
-.site_site .HeroNoImage_4 .Group12 .Group6 .ribehancefill .Vector_2 {
+.site_site
+  .HeroNoImage_4
+  .Frame427319686
+  .Group12
+  .Group6
+  .ribehancefill
+  .Vector_2 {
   position: absolute;
   left: 0.97px;
   top: 5.189476318359375px;
   width: 92.29259490966797%;
   height: 58.333444595336914%;
 }
-.site_site .HeroNoImage_4 .Group12 .Ellipse6 {
+.site_site .HeroNoImage_4 .Frame427319686 .Group12 .Ellipse6 {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -722,66 +729,46 @@
     rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
   box-sizing: border-box;
 }
-.site_site .HeroNoImage_4 .Line10 {
-  position: relative;
+
+.footer {
   flex: none;
   margin-bottom: 77.6px;
-  width: 1396.8px;
-  height: 0px;
-  border: 1px solid
-    rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
-}
-.site_site .HeroNoImage_4 .Frame427319689 {
-  position: relative;
-  flex: none;
-  margin-bottom: 77.6px;
-  height: 153.26px;
-  align-self: stretch;
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.site_site .HeroNoImage_4 .Frame427319689 .Frame427319687 {
-  position: relative;
+.site_site .HeroNoImage_4 .footer .Frame427319687 {
   flex: none;
   margin-right: 77.6px;
-  width: 729.4399999999999px;
   height: 153.26px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  margin-bottom: 1rem;
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .ElizabethSoaresumadesignerbrasileiracombasegeneralistacomfocoemprodutosdigitais {
-  position: relative;
-  flex: none;
-  margin-bottom: 23.28px;
+  margin-bottom: 26.28px;
   width: 351.14px;
   height: 81.48px;
+  margin-top: 2rem;
   color: rgba(147, 147, 149, 1);
   font-family: Inter;
   font-size: 22.31px;
   font-weight: 500;
   line-height: 27.000169277191162px;
 }
-.site_site .HeroNoImage_4 .Frame427319689 .Frame427319687 .Frame427319686_1 {
-  position: relative;
+.site_site .HeroNoImage_4 .footer .Frame427319687 .Frame427319686_1 {
   flex: none;
   margin-bottom: 23.28px;
-  width: 164.9px;
   height: 48.5px;
   display: flex;
   box-sizing: border-box;
 }
-.site_site
-  .HeroNoImage_4
-  .Frame427319689
-  .Frame427319687
-  .Frame427319686_1
-  .Group10_1 {
+.site_site .HeroNoImage_4 .footer .Frame427319687 .Frame427319686_1 .Group10_1 {
   position: relative;
   flex: none;
   margin-right: 9.7px;
@@ -790,7 +777,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group10_1
@@ -803,7 +790,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group10_1
@@ -817,7 +804,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group10_1
@@ -832,7 +819,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group10_1
@@ -847,12 +834,7 @@
     rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
   box-sizing: border-box;
 }
-.site_site
-  .HeroNoImage_4
-  .Frame427319689
-  .Frame427319687
-  .Frame427319686_1
-  .Group11_1 {
+.site_site .HeroNoImage_4 .footer .Frame427319687 .Frame427319686_1 .Group11_1 {
   position: relative;
   flex: none;
   margin-right: 9.7px;
@@ -861,7 +843,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group11_1
@@ -874,7 +856,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group11_1
@@ -888,7 +870,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group11_1
@@ -903,7 +885,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group11_1
@@ -918,12 +900,7 @@
     rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
   box-sizing: border-box;
 }
-.site_site
-  .HeroNoImage_4
-  .Frame427319689
-  .Frame427319687
-  .Frame427319686_1
-  .Group12_1 {
+.site_site .HeroNoImage_4 .footer .Frame427319687 .Frame427319686_1 .Group12_1 {
   position: relative;
   flex: none;
   margin-right: 9.7px;
@@ -932,7 +909,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group12_1
@@ -945,7 +922,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group12_1
@@ -959,7 +936,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group12_1
@@ -974,7 +951,7 @@
 }
 .site_site
   .HeroNoImage_4
-  .Frame427319689
+  .footer
   .Frame427319687
   .Frame427319686_1
   .Group12_1
@@ -989,8 +966,7 @@
     rgba(232.00000137090683, 231.00000143051147, 234.00000125169754, 1);
   box-sizing: border-box;
 }
-.site_site .HeroNoImage_4 .Frame427319689 .Frame427319688 {
-  position: relative;
+.site_site .HeroNoImage_4 .footer .Frame427319688 {
   flex: none;
   margin-right: 77.6px;
   width: 356.96px;
@@ -998,16 +974,11 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  margin-top: 2rem;
 }
-.site_site
-  .HeroNoImage_4
-  .Frame427319689
-  .Frame427319688
-  .NatalRioGrandedoNorteBrasil {
-  position: relative;
+.site_site .HeroNoImage_4 .footer .Frame427319688 .NatalRioGrandedoNorteBrasil {
   flex: none;
   margin-bottom: 23.28px;
-  width: 356.96px;
   height: 27.16px;
   color: rgba(147, 147, 149, 1);
   font-family: Inter;
@@ -1015,11 +986,7 @@
   font-weight: 500;
   line-height: 27.000169277191162px;
 }
-.site_site
-  .HeroNoImage_4
-  .Frame427319689
-  .Frame427319688
-  .soares0elizabethgmailcom {
+.site_site .HeroNoImage_4 .footer .Frame427319688 .soares0elizabethgmailcom {
   position: relative;
   flex: none;
   margin-bottom: 23.28px;
@@ -1031,7 +998,7 @@
   font-weight: 500;
   line-height: 27.000169277191162px;
 }
-.site_site .HeroNoImage_4 .Frame427319689 .Frame427319688 ._5584996387886 {
+.site_site .HeroNoImage_4 .footer .Frame427319688 ._5584996387886 {
   position: relative;
   flex: none;
   margin-bottom: 23.28px;

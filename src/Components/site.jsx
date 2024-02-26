@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./site.css";
 import ImgAsset from "../public";
 import { Link } from "react-router-dom";
@@ -7,7 +7,31 @@ import HorizontalTextAnimation from "./HorizontalTextAnimation";
 import Slider from "./Slider";
 
 export default function Site() {
-  return (
+  useEffect(() => {
+    function scrollToTargetSection() {
+      const targetSection = document.getElementById("targetSection");
+      if (!targetSection) return;
+
+      const targetPosition =
+        targetSection.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY >= targetPosition) {
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    }
+
+    window.addEventListener("scroll", scrollToTargetSection);
+
+    return () => {
+      window.removeEventListener("scroll", scrollToTargetSection);
+    };
+  }, []);
+
+  return false ? (
+    <div> digite a sua senha : </div>
+  ) : (
     <div className="site_site">
       <header className="header">
         <span className="title">
@@ -29,42 +53,40 @@ export default function Site() {
           Projetando produtos inclusivos, encantadores e impactantes.
         </span>
       </div>
-      <div className="HeroHeadingRight">
-        <div className="Container_1">
-          <div className="Column_1">
-            <div className="ImageWrapper">
-              <img className="Image" src={ImgAsset.site_Image} />
-            </div>
+      <div className="mainFlex">
+        <div className="Column_1">
+          <div className="ImageWrapper">
+            <img className="Image" src={ImgAsset.site_Image} />
           </div>
-          <div className="Column_2">
-            <span className="Atuocomodesignerh8anoscomosltimos5anosdedicadosaodesigndeprodutosdigitaisMeupropsitopromoverimpactopositivonavidadaspessoaspormeiodeprodutoseficientesinclusivosesignificativos">
-              Atuo como designer há 8 anos, com os últimos 5 anos dedicados ao
-              design de produtos digitais. Meu propósito é promover impacto
-              positivo na vida das pessoas por meio de produtos eficientes,
-              inclusivos e significativos.
+        </div>
+        <div className="Column_2">
+          <span className="Atuocomodesignerh8anoscomosltimos5anosdedicadosaodesigndeprodutosdigitaisMeupropsitopromoverimpactopositivonavidadaspessoaspormeiodeprodutoseficientesinclusivosesignificativos">
+            Atuo como designer há 8 anos, com os últimos 5 anos dedicados ao
+            design de produtos digitais. Meu propósito é promover impacto
+            positivo na vida das pessoas por meio de produtos eficientes,
+            inclusivos e significativos.
+          </span>
+          <span className="PortrsdadesignercombachareladoeespecializaoemprodutosdigitaishumameninaquedesdeapocadoOrkutjseaventuravacomHTMLePhotoscapesemsaberqueissomudariaoseurumoprofissionalDuranteoensinomdioaocursartcnicoemmultimdiameapaixoneipelodesignetudoqueeleenglobaescolhiseguirestacarreiraemeaprimoreinareadigitaletecnolgicaTenhoumolharminuciosoparaasinterfacescomcuidadoeprecisoparaencantarecriarvalordeformasignificativaconcretizandoideiaseprojetandoexperinciasVercurrculo">
+            <span>
+              Por trás da designer com bacharelado e especialização em produtos
+              digitais, há uma menina que desde a época do Orkut já se
+              aventurava com HTML e Photoscape, sem saber que isso mudaria o seu
+              rumo profissional. Durante o ensino médio, ao cursar técnico em
+              multimídia, me apaixonei pelo design e tudo que ele engloba,
+              escolhi seguir esta carreira e me aprimorei na área digital e
+              tecnológica.
             </span>
-            <span className="PortrsdadesignercombachareladoeespecializaoemprodutosdigitaishumameninaquedesdeapocadoOrkutjseaventuravacomHTMLePhotoscapesemsaberqueissomudariaoseurumoprofissionalDuranteoensinomdioaocursartcnicoemmultimdiameapaixoneipelodesignetudoqueeleenglobaescolhiseguirestacarreiraemeaprimoreinareadigitaletecnolgicaTenhoumolharminuciosoparaasinterfacescomcuidadoeprecisoparaencantarecriarvalordeformasignificativaconcretizandoideiaseprojetandoexperinciasVercurrculo">
-              <span>
-                Por trás da designer com bacharelado e especialização em
-                produtos digitais, há uma menina que desde a época do Orkut já
-                se aventurava com HTML e Photoscape, sem saber que isso mudaria
-                o seu rumo profissional. Durante o ensino médio, ao cursar
-                técnico em multimídia, me apaixonei pelo design e tudo que ele
-                engloba, escolhi seguir esta carreira e me aprimorei na área
-                digital e tecnológica.
-              </span>
-              <br />
-              <br />
-              <span>
-                Tenho um olhar minucioso para as interfaces, com cuidado e
-                precisão para encantar e criar valor de forma significativa,
-                concretizando ideias e projetando experiências.
-              </span>
-              <br />
-              <br />
-              <span>Ver currículo</span>
+            <br />
+            <br />
+            <span>
+              Tenho um olhar minucioso para as interfaces, com cuidado e
+              precisão para encantar e criar valor de forma significativa,
+              concretizando ideias e projetando experiências.
             </span>
-          </div>
+            <br />
+            <br />
+            <span className="strong">Ver currículo</span>
+          </span>
         </div>
       </div>
       <div className="animationContainer">
@@ -103,8 +125,7 @@ export default function Site() {
             </div>
           </div>
         </div>
-        <img className="Line10" src={ImgAsset.site_Line10} />
-        <footer className="footer">
+        <div className="footer">
           <div className="Frame427319687">
             <span className="ElizabethSoaresumadesignerbrasileiracombasegeneralistacomfocoemprodutosdigitais">
               Elizabeth Soares é uma designer brasileira com base generalista
@@ -140,14 +161,14 @@ export default function Site() {
           </div>
           <div className="Frame427319688">
             <span className="NatalRioGrandedoNorteBrasil">
-              Natal, Rio Grande do Norte, Brasil{" "}
+              Natal, Rio Grande do Norte, Brasil
             </span>
             <span className="soares0elizabethgmailcom">
               soares0elizabeth@gmail.com
             </span>
             <span className="_5584996387886">+55 84 996387886</span>
           </div>
-        </footer>
+        </div>
       </div>
     </div>
   );
