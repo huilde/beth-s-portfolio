@@ -22,23 +22,17 @@ const HorizontalTextAnimation = (props) => {
       const rect1 = textElement1.getBoundingClientRect();
       const rect2 = textElement2.getBoundingClientRect();
 
-      // Check if the first text element is outside the viewport
       if (rect1.right <= 0) {
-        // Move the first text element to the end
         textElement1.style.transform = `translateX(100vw)`;
       }
 
-      // Check if the second text element is outside the viewport
       if (rect2.left >= window.innerWidth) {
-        // Move the second text element to the beginning
         textElement2.style.transform = `translateX(-100%)`;
       }
     };
 
-    // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -50,20 +44,20 @@ const HorizontalTextAnimation = (props) => {
         ref={textRef1}
         className="animationChild"
         style={{
-          overflow: "hidden", // Hides overflowing text
-          whiteSpace: "nowrap", // Prevents text from wrapping
+          overflow: "hidden",
+          whiteSpace: "nowrap",
           position: "absolute",
-          top: top, // Adjust as needed
+          top: top,
           left: 0,
-          x: xPos1, // Apply horizontal position transformation
+          x: xPos1,
         }}
         animate={{
-          x: ["0.4%", "-100%"], // Start from left and end at right for the first text
+          x: ["0.4%", "-100%"],
         }}
         transition={{
-          duration: duration, // Adjust duration as needed
-          ease: "linear", // Linear easing for constant speed
-          repeat: Infinity, // Repeat infinitely
+          duration: duration,
+          ease: "linear",
+          repeat: Infinity,
         }}
       >
         {text}
@@ -73,20 +67,20 @@ const HorizontalTextAnimation = (props) => {
         ref={textRef2}
         className="animationChild"
         style={{
-          overflow: "hidden", // Hides overflowing text
-          whiteSpace: "nowrap", // Prevents text from wrapping
+          overflow: "hidden",
+          whiteSpace: "nowrap",
           position: "absolute",
-          top: top, // Adjust as needed
+          top: top,
           left: 0,
-          x: xPos2, // Apply horizontal position transformation
+          x: xPos2,
         }}
         animate={{
-          x: ["100%", "0.4%"], // Start from right and end at left for the second text
+          x: ["100%", "0.4%"],
         }}
         transition={{
-          duration: duration, // Adjust duration as needed
-          ease: "linear", // Linear easing for constant speed
-          repeat: Infinity, // Repeat infinitely
+          duration: duration,
+          ease: "linear",
+          repeat: Infinity,
         }}
       >
         {text}

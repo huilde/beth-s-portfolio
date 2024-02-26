@@ -38,6 +38,9 @@ dependencies:
   styled-components:
     specifier: ^5.3.1
     version: 5.3.11(@babel/core@7.23.9)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
+  swiper:
+    specifier: ^11.0.6
+    version: 11.0.6
   web-vitals:
     specifier: ^2.1.4
     version: 2.1.4
@@ -10021,6 +10024,11 @@ packages:
       csso: 4.2.0
       picocolors: 1.0.0
       stable: 0.1.8
+    dev: false
+
+  /swiper@11.0.6:
+    resolution: {integrity: sha512-W/Me7MQl5rNgdM5x9i3Gll76WsyVpnHn91GhBOyL7RCFUeg62aVnflzlVfIpXzZ/87FtJOfAoDH79ZH2Yq76zA==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /symbol-tree@3.2.4:

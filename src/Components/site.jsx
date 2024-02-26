@@ -4,12 +4,13 @@ import ImgAsset from "../public";
 import { Link } from "react-router-dom";
 
 import HorizontalTextAnimation from "./HorizontalTextAnimation";
+import Slider from "./Slider";
 
 export default function Site() {
   return (
     <div className="site_site">
       <header className="header">
-        <span className="">
+        <span className="title">
           Elizabeth
           <br />
           Soares
@@ -22,15 +23,11 @@ export default function Site() {
         </div>
       </header>
 
-      <div className="HeroHeadingLeft">
-        <div className="Container">
-          <div className="Column">
-            <span className="Designerdeproduto">Designer de produto</span>
-            <span className="Projetandoprodutosinclusivosencantadoreseimpactantes">
-              Projetando produtos inclusivos, encantadores e impactantes.
-            </span>
-          </div>
-        </div>
+      <div className="Container">
+        <span className="Designerdeproduto">Designer de produto</span>
+        <span className="mainText">
+          Projetando produtos inclusivos, encantadores e impactantes.
+        </span>
       </div>
       <div className="HeroHeadingRight">
         <div className="Container_1">
@@ -73,38 +70,10 @@ export default function Site() {
       <div className="animationContainer">
         <HorizontalTextAnimation text=" • prototipagem • design system • interação humano-computador • metodologia • gestão de projeto • sistema de identidade visual "></HorizontalTextAnimation>
       </div>
+      <Slider></Slider>
 
-      <div className="HeroNoImage_1">
-        <div className="Frame427319685">
-          <span className="_13">1/3</span>
-          <span className="VisualDesign">
-            Visual
-            <br />
-            Design
-          </span>
-        </div>
-      </div>
-      <div className="HeroNoImage_2">
-        <div className="Frame427319685_1">
-          <span className="_23">2/3</span>
-          <span className="Experinciadousurio">
-            Experiência
-            <br />
-            do usuário
-          </span>
-        </div>
-      </div>
-      <div className="HeroNoImage_3">
-        <div className="Frame427319685_2">
-          <span className="_33">3/3</span>
-          <span className="Inclusoeacessibilidade">
-            Inclusão e<br />
-            acessibilidade
-          </span>
-        </div>
-      </div>
       <div className="HeroNoImage_4">
-        <div className="Frame427319690">
+        <div className="sobre">
           <span className="Chegouataqui">Chegou até aqui?</span>
           <span className="Entreemcontato">Entre em contato</span>
           <div className="Frame427319686">
@@ -135,7 +104,7 @@ export default function Site() {
           </div>
         </div>
         <img className="Line10" src={ImgAsset.site_Line10} />
-        <div className="Frame427319689">
+        <footer className="footer">
           <div className="Frame427319687">
             <span className="ElizabethSoaresumadesignerbrasileiracombasegeneralistacomfocoemprodutosdigitais">
               Elizabeth Soares é uma designer brasileira com base generalista
@@ -178,7 +147,7 @@ export default function Site() {
             </span>
             <span className="_5584996387886">+55 84 996387886</span>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );
