@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./site.css";
 import ImgAsset from "../public";
 import { Link } from "react-router-dom";
@@ -7,27 +7,25 @@ import HorizontalTextAnimation from "./HorizontalTextAnimation";
 import Slider from "./Slider";
 
 export default function Site() {
-  useEffect(() => {
-    function scrollToTargetSection() {
-      const targetSection = document.getElementById("targetSection");
-      if (!targetSection) return;
+  const [scrollY, setScrollY] = useState(0);
 
-      const targetPosition =
-        targetSection.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY >= targetPosition) {
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-      }
+  useEffect(() => {
+    function handleScroll() {
+      setScrollY(window.scrollY);
+    }
+    console.log({ scrollY });
+    window.addEventListener("scroll", handleScroll);
+    if (scrollY > 825) {
+      console.log("teste");
+      // window.scrollTo({
+      //   top: 1470,
+      // });
     }
 
-    window.addEventListener("scroll", scrollToTargetSection);
-
     return () => {
-      window.removeEventListener("scroll", scrollToTargetSection);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrollY]);
 
   return false ? (
     <div> digite a sua senha : </div>
